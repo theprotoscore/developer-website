@@ -1,0 +1,147 @@
+/* -------------------- */
+/* Hero                 */
+/* -------------------- */
+
+main {
+    margin-block: 100px;
+}
+
+.hero-title {
+    max-inline-size: 1400px;
+
+    font-size: 7.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+.hero-intro {
+    max-inline-size: 700px;
+
+    margin-top: 40px;
+
+    font-size: 1.5rem;
+}
+
+.lede {
+    line-height: 1.45;
+}
+
+/* ================================================== */
+/* Desktop: 1280px - 1535px                           */
+/* ================================================== */
+
+@media screen and (max-width: 1535px) {
+    .hero-title {
+        font-size: 5.5rem;
+    }
+
+    .hero-intro {
+        max-inline-size: 650px;
+
+        font-size: 1.35rem;
+    }
+}
+
+/* ================================================== */
+/* Laptop: 1024px - 1279px                            */
+/* ================================================== */
+
+@media screen and (max-width: 1279px) {
+    main {
+        margin-block: 85px;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-intro {
+        font-size: 1.25rem;
+    }
+}
+
+/* ================================================== */
+/* Tablet: 768px - 1023px                             */
+/* ================================================== */
+
+@media screen and (max-width: 1023px) {
+    main {
+        margin-block: 75px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-intro {
+        max-inline-size: 600px;
+
+        margin-top: 32px;
+    }
+}
+
+/* ================================================== */
+/* Small tablet: 640px - 767px                        */
+/* ================================================== */
+
+@media screen and (max-width: 767px) {
+    main {
+        margin-block: 65px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3.4rem;
+        line-height: 1;
+    }
+
+    .hero-intro {
+        margin-inline: auto;
+        margin-top: 28px;
+
+        font-size: 1.15rem;
+    }
+}
+
+/* ================================================== */
+/* Phone: 480px - 639px                               */
+/* ================================================== */
+
+@media screen and (max-width: 639px) {
+    main {
+        margin-block: 55px;
+    }
+
+    .hero-title {
+        font-size: 2.7rem;
+    }
+
+    .hero-intro {
+        margin-top: 24px;
+
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+}
+
+/* ================================================== */
+/* Small phone: 320px - 479px                         */
+/* ================================================== */
+
+@media screen and (max-width: 479px) {
+    main {
+        margin-block: 45px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-intro {
+        font-size: 1rem;
+    }
+}

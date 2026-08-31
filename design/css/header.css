@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Geist', 'Segoe UI', sans-serif;
+    /* font-family: 'Segoe UI', sans-serif; */
+    color: #1311d1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: min(90%, 1536px);
+    margin-inline: auto;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+
+.header-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+}
+
+.header-left,
+.header-actions,
+.primary-navigation ul {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    gap: 40px;
+}
+
+.logo {
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.slash {
+    color: orangered;
+}
+
+.primary-navigation ul,
+.mobile-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.primary-navigation ul {
+    gap: 18px;
+}
+
+.primary-navigation a,
+.mobile-navigation a {
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.primary-navigation a::after,
+.mobile-navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.25s ease;
+}
+
+.primary-navigation a:hover::after,
+.mobile-navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.header-actions {
+    gap: 10px;
+}
+
+.resume-link,
+.contact-link {
+    padding: 10px 18px;
+    border: 1px solid #1311d1;
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.resume-link:hover {
+    background-color: #1311d1;
+    color: #f4f3ef;
+}
+
+.contact-link {
+    background-color: #1311d1;
+    color: #f4f3ef;
+}
+
+.contact-link:hover {
+    background-color: #f4f3ef;
+    color: #1311d1;
+}
+
+/* Hamburger */
+
+.menu-toggle {
+    display: none;
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+
+    background-color: #1311d1;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.2s ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-navigation {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile-navigation {
+        display: none;
+    }
+}
+
+/* Tablet / mobile */
+
+@media screen and (max-width: 1023px) {
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .primary-navigation,
+    .resume-link {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-navigation {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+
+        transition:
+            max-height 0.35s ease,
+            opacity 0.3s ease,
+            padding 0.35s ease;
+    }
+
+    .mobile-navigation.is-open {
+        max-height: 300px;
+        padding-top: 25px;
+        opacity: 1;
+    }
+
+    .mobile-navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .wrapper {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .contact-link {
+        padding: 9px 12px;
+        font-size: 0.68rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .contact-link {
+        padding-inline: 8px;
+        font-size: 0.62rem;
+    }
+}

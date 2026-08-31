@@ -1,7 +1,7 @@
-<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="css/header.css" />
         <link rel="stylesheet" href="css/main.css" />
@@ -22,7 +22,7 @@
             <div class="wrapper header-wrapper">
                 <div class="header-left">
                     <a href="#" class="logo">
-                        <i>F<span class="slash">/</span>K</i>
+                        <i> F<span class="slash">/</span>K</i>
                     </a>
 
                     <nav class="primary-navigation">
@@ -40,7 +40,27 @@
                 <div class="header-actions">
                     <a class="resume-link" href="#">RESUME</a>
                     <a class="contact-link" href="#contact">CONTACT ME</a>
+
+                    <button
+                        class="menu-toggle"
+                        aria-label="Toggle navigation"
+                        aria-expanded="false"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
+
+                <nav class="mobile-navigation">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#">Resume</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
@@ -68,4 +88,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-```
