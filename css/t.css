@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,26 +7,37 @@
 }
 
 body {
-    background-color: #000;
-    background-image: url('/images/noise-light.png');
-    background-repeat: repeat;
+    background-color: #212120;
 
     font-family: 'Geist', 'Segoe UI', sans-serif;
     /* font-family: 'Segoe UI', sans-serif; */
     color: #1311d1;
+
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+
+    background-image: url('/images/noisy-background_1194-7547.avif');
+    background-repeat: repeat;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .wrapper {
-    max-inline-size: 1440px;
+    width: min(100% - 32px, 1440px);
     margin: 0 auto;
-    @media (max-width: 1280px) {
-        max-inline-size: 1024px;
-    }
 }
 
 header {
-    padding: 10px 0;
-    border-bottom: 1px solid #d2d2d2;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
     background-color: #151513;
 }
 
@@ -37,7 +50,13 @@ header .wrapper,
 
 .header-left {
     gap: 40px;
-    align-items: baseline;
+}
+
+.logo {
+    font-size: 2.15rem;
+    font-weight: 900;
+    color: #1311d1;
+    letter-spacing: -2px;
 }
 
 .slash {
@@ -54,9 +73,6 @@ a {
     text-decoration: none;
     color: #1311d1;
     color: #fff;
-    font-family: 'Figtree', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
 }
 
 .header-actions {
@@ -66,20 +82,22 @@ a {
 }
 .resume-link {
     padding: 10px 20px;
-    border: 1px solid #d4ad33;
+    border: 1px solid #1311d1;
 }
 .contact-link {
     padding: 10px 20px;
-    background-color: #d4ad33;
-    color: #151513;
+    background-color: #1311d1;
+    color: #d2d2d2;
 }
 
 h6 {
-    color: #d2d2d2;
-    font-size: 13px;
+    color: #000;
+    font-size: 14px;
     font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: uppercase;
 }
 
 h1 {
-    color: #d2d2d2;
+    color: #fff;
 }

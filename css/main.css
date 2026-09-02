@@ -1,0 +1,16 @@
+h1 {
+    font-size: 7rem;
+    letter-spacing: -0.055em;
+    @media (max-width: 1280px) {
+        font-size: 5rem;
+    }
+}
+
+section {
+    margin-block: 75px;
+}
+
+p {
+    color: #8f0a30;
+    width: 1000px;
+}
