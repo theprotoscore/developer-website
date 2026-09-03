@@ -6,12 +6,19 @@
 
 body {
     background-color: #000;
-    background-image: url('/images/noise-light.png');
     background-repeat: repeat;
+    position: relative;
 
     font-family: 'Geist', 'Segoe UI', sans-serif;
     /* font-family: 'Segoe UI', sans-serif; */
-    color: #1311d1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/images/noise-light.png');
+        opacity: 0.4;
+    }
 }
 
 .wrapper {
@@ -26,6 +33,9 @@ header {
     padding: 10px 0;
     border-bottom: 1px solid #d2d2d2;
     background-color: #151513;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 header .wrapper,
@@ -40,8 +50,14 @@ header .wrapper,
     align-items: baseline;
 }
 
+.logo {
+    color: #d2d2d2;
+    font-size: 13px;
+    font-weight: 500;
+}
+
 .slash {
-    color: orangered;
+    color: #ff4500;
 }
 
 .primary-navigation ul {
@@ -50,36 +66,32 @@ header .wrapper,
     gap: 40px;
 }
 
+.primary-navigation ul li a {
+    padding-bottom: 5px;
+}
+.primary-navigation ul li a:hover {
+    border-bottom: 1px solid #d2d2d2;
+}
+
 a {
     text-decoration: none;
-    color: #1311d1;
-    color: #fff;
+    color: #d2d2d2;
     font-family: 'Figtree', sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+.primary-navigation a {
+    letter-spacing: 0.12em;
 }
 
 .header-actions {
     display: flex;
     gap: 20px;
-    font-size: 12px;
+    align-items: baseline;
 }
-.resume-link {
-    padding: 10px 20px;
-    border: 1px solid #d4ad33;
-}
+.resume-link,
 .contact-link {
     padding: 10px 20px;
-    background-color: #d4ad33;
-    color: #151513;
-}
-
-h6 {
-    color: #d2d2d2;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-h1 {
-    color: #d2d2d2;
+    border: 1px solid #d4ad33;
 }

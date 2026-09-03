@@ -1,16 +1,40 @@
 h1 {
+    color: #d2d2d2;
     font-size: 7rem;
     letter-spacing: -0.055em;
+    line-height: 1;
+    font-family: 'Figtree', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    z-index: 1;
     @media (max-width: 1280px) {
         font-size: 5rem;
     }
 }
 
 section {
-    margin-block: 75px;
+    padding-block: 128px;
 }
 
-p {
+.hero-intro {
     color: #8f0a30;
-    width: 1000px;
+    max-width: 1000px;
+}
+
+.about {
+    padding: 10px;
+    background-color: orangered;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h2 {
+    color: #d2d2d2;
+    font-size: 4rem;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.about p {
+    color: #d2d2d2;
 }
