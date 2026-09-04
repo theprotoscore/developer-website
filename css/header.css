@@ -17,7 +17,7 @@ body {
         position: absolute;
         inset: 0;
         background-image: url('/images/noise-light.png');
-        opacity: 0.4;
+        opacity: 0.5;
     }
 }
 
