@@ -6,7 +6,6 @@
 
 body {
     background-color: #000;
-    background-repeat: repeat;
     position: relative;
 
     font-family: 'Geist', 'Segoe UI', sans-serif;
@@ -17,6 +16,7 @@ body {
         position: absolute;
         inset: 0;
         background-image: url('../images/noise-light.png');
+        background-repeat: repeat;
         opacity: 0.3;
     }
 }
